@@ -31,10 +31,10 @@ sudo systemctl enable php7.2-fpm
 
 echo "Step:5 [Install PHPmyadmin]"
 wget https://files.phpmyadmin.net/phpMyAdmin/4.7.9/phpMyAdmin-4.7.9-all-languages.zip -O ./phpmyadmin.zip
-unzip phpmyadmin.zip -d /home/farhad/html
-mv phpMyAdmin-4.7.9-all-languages /home/farhad/html/phpmyadmin
-sudo chown -R www-data:www-data /home/farhad/html/phpmyadmin/
-sudo chmod -R 755 /home/farhad/html/phpmyadmin
+unzip phpmyadmin.zip -d /home/$USER/html
+mv phpMyAdmin-4.7.9-all-languages /home/$USER/html/phpmyadmin
+sudo chown -R www-data:www-data /home/$USER/html/phpmyadmin/
+sudo chmod -R 755 /home/$USER/html/phpmyadmin
 echo -e "PHPmyadmin Installation Completed Successfully\n"
 
 sudo systemctl restart nginx
