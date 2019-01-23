@@ -91,3 +91,4 @@ echo -e "Composer Installation Completed Successfully\n"
 
 
 echo "Thanks  !!! ~ SUST CSE Developer Network (SCDN) - http://scdnlab.com"
+# /etc/mysql/debian.cnf
