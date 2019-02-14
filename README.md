@@ -37,7 +37,7 @@ bash <(wget -qO- https://raw.githubusercontent.com/scdnlab/easy-ubuntu-dev-setup
 ## Terminal Alias Helper
 ### Please run the following command on your Terminal
 ```bash
-bash <(wget -qO- https://raw.githubusercontent.com/scdnlab/easy-ubuntu-dev-setup/master/terminal_alias_helper.sh)
+bash <(wget -qO- https://raw.githubusercontent.com/RafikFarhad/easy-ubuntu-dev-setup/master/terminal_alias_helper.sh)
 ```
 
 
