@@ -51,9 +51,8 @@ server {
   server_name _;
   listen 80;
 
-  #charset koi8-r;
-  access_log /var/log/nginx/host.access.log main;
-
+  # charset koi8-r;
+  # access_log /var/log/nginx/$host.access.log main flush=30m;
 
   root /var/www/html;
   index index.php index.html;
