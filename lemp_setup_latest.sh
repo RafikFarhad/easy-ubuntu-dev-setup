@@ -108,7 +108,6 @@ server {
 }
 EOF
 sudo mv /tmp/default.conf /etc/nginx/sites-enabled/default.conf
-rm /tmp/default.conf
 echo -e "Writing Config for PhpMyAdmin"
 
 cat > /tmp/pmad.conf <<EOF
@@ -134,7 +133,6 @@ server {
 }
 EOF
 sudo mv /tmp/pmad.conf /etc/nginx/sites-enabled/pmad.conf
-rm /tmp/pmad.conf
 
 echo -e "Writing Basic Index File"
 
@@ -153,7 +151,6 @@ cat > /tmp/index.html <<EOF
 </html>
 EOF
 sudo mv /tmp/index.html /var/www/html/index.html
-rm /tmp/index.html
 
 echo -e "Testng Configuration\n"
 sudo nginx -t
