@@ -1,6 +1,7 @@
-echo "Welcome to Easy Ubuntu Dev Setup 1.0"
+echo "Welcome to Easy Ubuntu Dev Setup 2.0"
 echo "[SSH Key Generate Module]"
-echo -e "Maintained By SUST CSE Developer Network (SCDN)\n"
+echo -e "Created By SUST CSE Developer Network (SCDN)\n"
+echo -e "Maintained By RafikFarhad<rafikfarhad@gmail.com>\n"
 
 echo "Step:1 [Generating a new SSH key]"
 read -p 'Your Github/Gitlab Email ID:  ' email
