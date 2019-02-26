@@ -45,7 +45,7 @@ sudo rm /etc/nginx/sites-enabled/default
 
 echo -e "Writing Default Nginx Config"
 
-sudo cat > /etc/nginx/sites-enabled/default.conf <<EOF
+cat > /tmp/default.conf <<EOF
 server {
 
   server_name _;
@@ -108,9 +108,11 @@ server {
   }
 }
 EOF
+sudo mv /tmp/default.conf /etc/nginx/sites-enabled/default.conf
+rm /tmp/default.conf
 echo -e "Writing Config for PhpMyAdmin"
 
-sudo cat > /etc/nginx/sites-enabled/pmad.conf <<EOF
+cat > /tmp/pmad.conf <<EOF
 server {
 
   listen 50;
@@ -132,7 +134,29 @@ server {
 
 }
 EOF
+sudo mv /tmp/pmad.conf /etc/nginx/sites-enabled/pmad.conf
+rm /tmp/pmad.conf
 
+echo -e "Writing Basic Index File"
+
+cat > /tmp/index.html <<EOF
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hello World</title>
+</head>
+<body>
+    <h1>Welcome to the Nginx World</h1>
+</body>
+</html>
+EOF
+sudo mv /tmp/index.html /var/www/html/index.html
+rm /tmp/index.html
+
+echo -e "Testng Configuration\n"
 sudo nginx -t
 sudo systemctl reload nginx
 
