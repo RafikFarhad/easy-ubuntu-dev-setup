@@ -35,7 +35,7 @@ sudo systemctl enable php7.3-fpm
 echo -e "Step:5 [Install PHPmyadmin]"
 wget https://files.phpmyadmin.net/phpMyAdmin/4.7.9/phpMyAdmin-4.7.9-all-languages.zip -O ./phpmyadmin.zip
 unzip phpmyadmin.zip -d /home/$USER
-mv /home/$USER/phpMyAdmin-4.7.9-all-languages /usr/share/phpmyadmin
+sudo mv /home/$USER/phpMyAdmin-4.7.9-all-languages /usr/share/phpmyadmin
 sudo chown -R www-data:www-data /usr/share/phpmyadmin
 sudo chmod -R 755 /usr/share/phpmyadmin
 echo -e "PHPmyadmin Installation Completed Successfully\n"
@@ -45,7 +45,7 @@ sudo rm /etc/nginx/sites-enabled/default
 
 echo -e "Writing Default Nginx Config"
 
-cat > /etc/nginx/sites-enabled/default.conf <<EOF
+sudo cat > /etc/nginx/sites-enabled/default.conf <<EOF
 server {
 
   server_name _;
@@ -110,7 +110,7 @@ server {
 EOF
 echo -e "Writing Config for PhpMyAdmin"
 
-cat > /etc/nginx/sites-enabled/pmad.conf <<EOF
+sudo cat > /etc/nginx/sites-enabled/pmad.conf <<EOF
 server {
 
   listen 50;
