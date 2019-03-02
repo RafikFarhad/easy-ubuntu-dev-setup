@@ -122,7 +122,7 @@ server {
   location ~ \.php\$ {
 
     include snippets/fastcgi-php.conf;
-    fastcgi_pass unix:/run/php/php7.2-fpm.sock;
+    fastcgi_pass unix:/run/php/php7.3-fpm.sock;
 
   }
   location ~* (.+\.(jpg|jpeg|gif|css|png|js|ico|html|xml|txt))\$ {
